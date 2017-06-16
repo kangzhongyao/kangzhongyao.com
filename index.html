@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style>
         ul,ol {
             list-style: none;
         }
         body {
+            overflow-x: hidden; 
             background:
             radial-gradient(black 15%, transparent 16%) 0 0,
             radial-gradient(black 15%, transparent 16%) 8px 8px,
@@ -18,6 +20,31 @@
             background-color:#282828;
             background-size:16px 16px;
         }
+        .jumbotron {
+            overflow: hidden;
+        }
+        .jumbotron img {
+            width: 100%;
+        }
+        .btn-lg {
+            float: right;
+        }
+        #info {
+                position: absolute;
+                top: 0px; width: 100%;
+                color: #ffffff;
+                padding: 5px;
+                font-family:Monospace;
+                font-size:13px;
+                text-align:center;
+                z-index:1000;
+            }
+            #oldie {
+                background:rgb(200,100,0) !important;
+                color:#fff;
+            }
+            #vt { display:none }
+            #vt, #vt a { color:orange; }
   </style>
 </head>
 <body >
@@ -52,19 +79,138 @@
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
-        <!-- <button id="button hidden">点击发声</button> -->
-        <h1 class="bg-primary">网站正在建设中</h1>
+        <div class="container-fluid col">
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/p1.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/p2.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/p3.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/p4.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/p5.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/p6.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/dodge.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/p8.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="jumbotron">
+                  <h2>生活不止眼前的苟且</h2>
+                  <p>生活不止眼前的苟且,还有诗和远方的田野</p>
+                  <p><img src="images/p9.webp" alt=""></p>
+                  <p><a class="btn btn-info btn-lg" href="" role="button">阅读全文</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <ul class="list-group">
+                <li class="list-group-item">我是谁</li>
+                <li class="list-group-item">我从哪里来</li>
+                <li class="list-group-item">我要去哪里</li>
+                <li class="list-group-item">中午吃什么</li>
+                <li class="list-group-item">晚上吃什么</li>
+            </ul> 
+        </div>
+        <div class="container-fluid">
+            <p>this page</p>
+        </div>
     </div>
 </body>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script type="text/javascript" src="audio.js"></script>
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/master/build/three.min.js"></script>
 <script>
-    var app = new Vue({
-        el : "#app",
-        data: {
+    var camera, scene, renderer;
+    var geometry, material, mesh;
 
-        }
-    }) 
+    init();
+    animate();
+
+    function init() {
+
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+        camera.position.z = 1000;
+
+        scene = new THREE.Scene();
+
+        geometry = new THREE.BoxGeometry(300, 300, 300);
+        material = new THREE.MeshBasicMaterial({
+            color: 0x39f,
+            wireframe: true
+        });
+
+        mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        document.body.appendChild(renderer.domElement);
+
+    }
+
+    function animate() {
+
+        requestAnimationFrame(animate);
+
+        mesh.rotation.x += 0.01;
+        mesh.rotation.y += 0.02;
+
+        renderer.render(scene, camera);
+
+    }
 </script>
 </html>
