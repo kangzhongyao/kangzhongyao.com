@@ -2,70 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>测试demo</title>
-</head>
-<body>
-    <input type="text" id="data">
-    <button id="save">保存</button>
-</body>
-<button id="button">经过我</button>
-<script type="text/javascript">
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-(function () {
-    if (!window.AudioContext) {
-        alert('当前浏览器不支持Web Audio API');
-        return;
-    }
-
-    // 按钮元素
-    var eleButton = document.getElementById('button');
-
-    // 创建新的音频上下文接口
-    var audioCtx = new AudioContext();
-
-    // 发出的声音频率数据，表现为音调的高低
-    var arrFrequency = [196.00, 220.00, 246.94, 261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50];
-
-    // 音调依次递增或者递减处理需要的参数
-    var start = 0, direction = 1;
-
-    // 鼠标hover我们的按钮的时候
-    eleButton.addEventListener('click', function () {
-        // 当前频率
-        var frequency = arrFrequency[start];
-        // 如果到头，改变音调的变化规则（增减切换）
-        if (!frequency) {
-            direction = -1 * direction;
-            start = start + 2 * direction;
-            frequency = arrFrequency[start];
+  <title></title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+        ul,ol {
+            list-style: none;
         }
-        // 改变索引，下一次hover时候使用
-        start = start + direction;
+        body {
+            background:
+            radial-gradient(black 15%, transparent 16%) 0 0,
+            radial-gradient(black 15%, transparent 16%) 8px 8px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+            background-color:#282828;
+            background-size:16px 16px;
+        }
+  </style>
+</head>
+<body >
+    <div id="app">
+        <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand text-info" href="index.html">首页</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="">美女 <span class="sr-only"></span></a></li>
+                    <li><a href="">美食</a></li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="你试试看">
+                    </div>
+                    <button type="submit" class="btn btn-default">反正搜不到</button>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">老司机快上车</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+        <!-- <button id="button hidden">点击发声</button> -->
+        <h1 class="bg-primary">网站正在建设中</h1>
+    </div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script type="text/javascript" src="audio.js"></script>
+<script>
+    var app = new Vue({
+        el : "#app",
+        data: {
 
-        // 创建一个OscillatorNode, 它表示一个周期性波形（振荡），基本上来说创造了一个音调
-        var oscillator = audioCtx.createOscillator();
-        // 创建一个GainNode,它可以控制音频的总音量
-        var gainNode = audioCtx.createGain();
-        // 把音量，音调和终节点进行关联
-        oscillator.connect(gainNode);
-        // audioCtx.destination返回AudioDestinationNode对象，表示当前audio context中所有节点的最终节点，一般表示音频渲染设备
-        gainNode.connect(audioCtx.destination);
-        // 指定音调的类型，其他还有square|triangle|sawtooth
-        oscillator.type = 'sine';
-        // 设置当前播放声音的频率，也就是最终播放声音的调调
-        oscillator.frequency.value = frequency;
-        // 当前时间设置音量为0
-        gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-        // 0.01秒后音量为1
-        gainNode.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 0.01);
-        // 音调从当前时间开始播放
-        oscillator.start(audioCtx.currentTime);
-        // 1秒内声音慢慢降低，是个不错的停止声音的方法
-        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1);
-        // 1秒后完全停止声音
-        oscillator.stop(audioCtx.currentTime + 1);
-    });
-})();
-
+        }
+    }) 
 </script>
 </html>
