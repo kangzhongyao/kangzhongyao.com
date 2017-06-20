@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.close {
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+<div class="close" onclick="window.close();"></div>
+</body>
+<script src="https://cdn.bootcss.com/p5.js/0.5.11/p5.min.js"></script>
+<script>
+	function setup() {
+		createCanvas(640,480);
+	}
+	function draw() {
+		if(mouseIsPressed) {
+			fill(0);
+		} else {
+			fill(255);
+		}
+		ellipse(mouseX,mouseY,80,80);
+	}
+</script>
+</html>
